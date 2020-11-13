@@ -14,6 +14,7 @@ h2 {
 }
 
 .footer{
+    position: fixed;
     left: 0px;
     bottom: 20px;
     width: 100%;
@@ -21,7 +22,7 @@ h2 {
     text-align: center;
     color: plum;
     font-family: "Gotham Thin";
-    font-size: 15px;
+    font-size: 12px;
 }
 .form {
     text-align: center;

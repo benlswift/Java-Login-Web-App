@@ -21,4 +21,9 @@ public class UserBean {
         return user;
     }
 
+//    public UsersEntity submit(String username){
+//        return userDAO.findByUserName(username).get(0);
+//    }
+
+
 }

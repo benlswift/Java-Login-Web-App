@@ -8,14 +8,19 @@
 <body>
 <ui:composition template="/WEB-INF/templates/template.xhtml">
     <ui:define name="content">
+        <h:messages id="messages" globalOnly="true" showDetail="false" />
+
         <div class="form">
     <h:form style="position: center">
         <h:panelGrid columns="2">
-            <h:outputLabel  value="Enter Username"/>
+            <h:outputLabel  value="ENTER USERNAME"/>
                 <h:inputText value="#{userBean.user.username}"/>
-            <h:outputLabel value="Enter Password"/>
+            <h:outputLabel value="ENTER PASSWORD"/>
                 <h:inputSecret value="#{userBean.user.password}"/>
-            <h:commandButton style="color: black; background-color: white; font-family: 'Gotham Black';text-align: center;position: center" value="SUBMIT" action="#{registrationService.registration(userBean.user)}"/>
+            <h:outputLabel value=""/>
+            <h:commandButton style="color: black; background-color: white; font-family: 'Gotham Black';
+            text-align: center;position: center" value="SUBMIT"
+                             action="#{registrationService.registration(userBean.user.username,userBean.user.password)}"/>
         </h:panelGrid>
 
     </h:form>
