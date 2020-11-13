@@ -14,13 +14,15 @@
     <h:form style="position: center">
         <h:panelGrid columns="2">
             <h:outputLabel  value="ENTER USERNAME"/>
-                <h:inputText value="#{userBean.user.username}"/>
+                <h:inputText id="username"/>
             <h:outputLabel value="ENTER PASSWORD"/>
-                <h:inputSecret value="#{userBean.user.password}"/>
+                <h:inputSecret id="password"/>
+            <h:outputLabel value="ENTER ROLE"/>
+            <h:inputText id="role"/>
             <h:outputLabel value=""/>
             <h:commandButton style="color: black; background-color: white; font-family: 'Gotham Black';
-            text-align: center;width: 145px" value="SUBMIT"
-                             action="#{userBean.submit}"/>
+            text-align: center;position: center" value="SUBMIT"
+                             action="#{loginService.registration(username,password,role)}"/>
         </h:panelGrid>
 
     </h:form>

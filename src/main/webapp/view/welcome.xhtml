@@ -9,8 +9,13 @@
 <ui:composition template="/WEB-INF/templates/template.xhtml">
 
     <ui:define name="content">
-    <h1 style="color: plum"> WELCOME #{userBean.user.username}</h1>
-</ui:define>
+        <h:form>
+            <h2>#{userBean.user.accessLevel}</h2>
+            <h:commandButton value="ADMIN PAGE" style="font-family: 'Gotham Black'" action="admin_page?faces-redirect=true"/>
+            <h:commandButton value="LOGOUT" style="font-family: 'Gotham Black'" action="#{userBean.logout}"/>
+        </h:form>
+    <h1 style="color: plum"> WELCOME #{request.userPrincipal.name}</h1>
+    </ui:define>
 </ui:composition>
 </body>
 </html>

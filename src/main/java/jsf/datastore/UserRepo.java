@@ -1,24 +1,25 @@
 package jsf.datastore;
 
 import jsf.entities.User;
+import jsf.entities.UsersEntity;
 
 import java.util.ArrayList;
 
 public class UserRepo {
-    private ArrayList<User> validUsers = new ArrayList<>();
+    private ArrayList<UsersEntity> validUsers = new ArrayList<>();
     {
-        addUser(1,"ben", "password","ADMIN");
-        addUser(2,"user1","password1","USER");
+        addUser("ben", "password","ADMIN");
+        addUser("user1","password1","USER");
     }
 
-    //CRUD
-    public ArrayList<User> getUsers(){
+    public ArrayList<UsersEntity> getUsers(){
         return validUsers;
     }
 
-    public void addUser(int id, String username, String password, String accessLevel){
-        User user = new User();
-        user.setId(id);
+    public void addUser(String username, String password, String accessLevel){
+        UsersEntity user = new UsersEntity();
+        int nextID = validUsers.size();
+        user.setId(nextID);
         user.setUsername(username);
         user.setPassword(password);
         user.setAccessLevel(accessLevel);
