@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<body>
+<ui:composition template="/WEB-INF/templates/template.xhtml">
+    <ui:define name="content">
+        <div class="form">
+    <h:form style="position: center">
+        <h:panelGrid columns="2">
+            <h:outputLabel  value="Enter Username"/>
+                <h:inputText value="#{userBean.user.username}"/>
+            <h:outputLabel value="Enter Password"/>
+                <h:inputSecret value="#{userBean.user.password}"/>
+            <h:commandButton style="color: black; background-color: white; font-family: 'Gotham Black';text-align: center;position: center" value="SUBMIT" action="#{registrationService.registration(userBean.user)}"/>
+        </h:panelGrid>
+
+    </h:form>
+        </div>
+    </ui:define>
+</ui:composition>
+</body>
+</html>

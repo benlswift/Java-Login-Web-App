@@ -1,0 +1,36 @@
+body{
+    font-family: "Gotham Black";
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-size: 100px;
+    text-align: center;
+}
+h2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.footer{
+    left: 0px;
+    bottom: 20px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: plum;
+    font-family: "Gotham Thin";
+    font-size: 15px;
+}
+.form {
+    text-align: center;
+    margin-left: 40%;
+}
+commandButton{
+    position: center;
+    text-align: center;
+    font-family: "Gotham Thin";
+    background-color: white;
+    color: black;
+}
