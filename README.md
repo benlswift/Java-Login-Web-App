@@ -18,3 +18,19 @@ A Java EE program where users can login and do very little. Admins can login and
 - CSS has been used to create clean, consistant, webpages 
 - Only admin users can access the add new users page
 - The resources folder cannot be accessed
+
+## Technology
+### Java Server Faces
+- JSFs are used to create the XHTML pages
+- These pages communicate with the Java Beans - which provide the functionality
+
+### Java EE Security
+- Resource files are restricted
+- User authentication uses an identity store to verify user roles
+
+## User Guide
+- Upon running the program, the index page is opened
+- Users can log in to the website on this page
+- Once logged in the user is taken to the welcome page, the user's name is displayed here
+- If the user is an admin, they can access the admin page
+- From the admin page, an admin can add new users 
